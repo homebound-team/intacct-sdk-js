@@ -64,7 +64,7 @@ export default class MessageFormatter {
     private static headers(headers) {
         let result = "";
         for (const key in headers) {
-            if (headers.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(headers, key)) {
                 result = result + key + ": " + headers[key] + os.EOL;
             }
         }
@@ -89,7 +89,7 @@ export default class MessageFormatter {
                 + options.url + " "
                 + os.EOL;
             for (const key in options.headers) {
-                if (options.headers.hasOwnProperty(key)) {
+                if (Object.prototype.hasOwnProperty.call(options.headers, key)) {
                     result = result + os.EOL + " {" + key + "}: " + options.headers[key];
                 }
             }
@@ -127,7 +127,7 @@ export default class MessageFormatter {
                 result =  result + "HTTP/1.1 " +
                     + response.status + " " + response.statusText;
                 for (const key in response.headers) {
-                    if (response.headers.hasOwnProperty(key)) {
+                    if (Object.prototype.hasOwnProperty.call(response.headers, key)) {
                         result = result + os.EOL + " {" + key + "}: " + response.headers.get(key);
                     }
                 }

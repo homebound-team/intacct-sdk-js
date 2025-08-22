@@ -1,6 +1,6 @@
 {
   "name": "@allangsilva/intacct-sdk",
-  "version": "2.2.1-patch.0",
+  "version": "2.2.1-patch.3",
   "description": "Patched fork of Intacct SDK JS with Node 24 compatibility",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
