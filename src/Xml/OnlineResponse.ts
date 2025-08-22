@@ -17,7 +17,6 @@
  * permissions and limitations under the License.
  */
 
-import {isArray, isNullOrUndefined} from "util";
 import IntacctException from "../Exceptions/IntacctException";
 import ResponseException from "../Exceptions/ResponseException";
 import AbstractResponse from "./AbstractResponse";
@@ -57,7 +56,7 @@ export default class OnlineResponse extends AbstractResponse {
         }
 
         if (this.xml["response"]["operation"].hasOwnProperty("result")) {
-            if (isArray(this.xml["response"]["operation"]["result"])) {
+            if (Array.isArray(this.xml["response"]["operation"]["result"])) {
                 for (const index in this.xml["response"]["operation"]["result"]) {
                     if (this.xml["response"]["operation"]["result"].hasOwnProperty(index)) {
                         this._results.push(new Result(this.xml["response"]["operation"]["result"][index]));
@@ -71,4 +70,8 @@ export default class OnlineResponse extends AbstractResponse {
     public getResult(key = 0): Result {
         return this._results[key];
     }
+}
+
+function isNullOrUndefined(param: any | null | undefined): param is null | undefined {
+    return param === null || param === undefined;
 }

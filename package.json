@@ -1,7 +1,7 @@
 {
-  "name": "@intacct/intacct-sdk",
-  "version": "2.2.1",
-  "description": "Sage Intacct SDK for JavaScript",
+  "name": "@allangsilva/intacct-sdk",
+  "version": "2.2.1-patch.0",
+  "description": "Patched fork of Intacct SDK JS with Node 24 compatibility",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
@@ -10,19 +10,15 @@
     "sage",
     "sdk"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/intacct/intacct-sdk-js.git"
-  },
-  "author": {
-    "name": "Sage Intacct, Inc.",
-    "url": "https://www.sageintacct.com"
+    "url": "https://github.com/allangsilva/intacct-sdk-js"
   },
   "license": "Apache-2.0",
   "homepage": "https://developer.intacct.com",
-  "bugs": {
-    "url": "https://github.com/intacct/intacct-sdk-js/issues"
-  },
   "engines": {
     "node": ">=14.20.0"
   },
