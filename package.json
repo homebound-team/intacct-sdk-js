@@ -1,6 +1,6 @@
 {
-  "name": "@allangsilva/intacct-sdk",
-  "version": "2.2.1-patch.3",
+  "name": "@homebound/intacct-sdk",
+  "version": "2.2.2",
   "description": "Patched fork of Intacct SDK JS with Node 24 compatibility",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -61,8 +61,7 @@
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "tslint": "^5.20.1",
-    "typedoc": "^0.19.2",
-    "typedoc-plugin-external-module-name": "^4.0.6",
+    "typedoc": "^0.20.0",
     "typescript": "^4.2.4"
   },
   "dependencies": {
