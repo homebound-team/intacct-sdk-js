@@ -30,13 +30,11 @@ workflows:
     jobs:
       - publish:
           context:
-            # - npm-publish
-            - npm-readonly
+            - npm-publish
           filters:
             branches:
               only:
                 - fork
-                - publish
 
 jobs:
   build:
