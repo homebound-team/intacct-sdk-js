@@ -1,12 +1,23 @@
 # Sage Intacct SDK for JavaScript
 
+## Homebound Fork
 
-## ⚠️ Deprecation Notice ⚠️  
+We need to eventually migrate to use the REST API specified in the deprecation notice below. However, in the meantime,
+we have patched this repo to be compatible with Node 24.
 
-As of **Sage Intacct 2025 Release 1** (February 2025), the **REST API** is **Generally Available (GA)**.  
-With this, we are **no longer actively developing enhancements** for the XML SDKs.  
+It is published to NPM as `@homebound/intacct-sdk-js`.
 
-Developers can continue using the SDKs, but any future changes, maintenance, and feature development will be **self-managed**.  
+You can choose to use this fork if you'd like, but it is provided in an as-is state. We are working to move to the
+REST API, so we do not intend to support this fork long term.
+
+--
+
+## ⚠️ Deprecation Notice ⚠️
+
+As of **Sage Intacct 2025 Release 1** (February 2025), the **REST API** is **Generally Available (GA)**.
+With this, we are **no longer actively developing enhancements** for the XML SDKs.
+
+Developers can continue using the SDKs, but any future changes, maintenance, and feature development will be **self-managed**.
 For new integrations, we strongly recommend using the [REST API](https://developer.sage.com/intacct/docs/).
 
 For any questions, refer to our [developer support](https://developer.sage.com/intacct/docs/developer-portal/rest-api-faq/).
