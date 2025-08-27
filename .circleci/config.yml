@@ -20,23 +20,23 @@ commands:
 workflows:
   build:
     jobs:
-      - build
-    filters:
-      branches:
-        ignore:
-          - master # upstream repo
-          - fork   # our 'main' branch
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master # upstream repo
+                - fork   # our 'main' branch
   deploy:
     jobs:
-      - publish
-    context:
-      # - npm-publish
-      - npm-readonly
-    filters:
-      branches:
-        only:
-          - fork
-          - publish
+      - publish:
+          context:
+            # - npm-publish
+            - npm-readonly
+          filters:
+            branches:
+              only:
+                - fork
+                - publish
 
 jobs:
   build:
