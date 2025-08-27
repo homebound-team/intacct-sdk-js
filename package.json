@@ -1,6 +1,6 @@
 {
-  "name": "@allangsilva/intacct-sdk",
-  "version": "2.2.1-patch.3",
+  "name": "@homebound/intacct-sdk",
+  "version": "2.2.2",
   "description": "Patched fork of Intacct SDK JS with Node 24 compatibility",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/allangsilva/intacct-sdk-js"
+    "url": "git+https://github.com/homebound-team/intacct-sdk-js.git"
   },
   "license": "Apache-2.0",
   "homepage": "https://developer.intacct.com",
