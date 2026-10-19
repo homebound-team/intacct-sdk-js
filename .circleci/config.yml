@@ -30,7 +30,7 @@ workflows:
     jobs:
       - publish:
           context:
-            - npm-publish
+            - npm-trusted-publish
           filters:
             branches:
               only:
@@ -70,9 +70,10 @@ jobs:
           name: Build
           command: npm run build
       - run:
-          name: Login to npm
-          command: |
-            npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          name: Install npm 11 for trusted publishing
+          command: sudo npm install -g npm@11
       - run:
           name: Publish to npm
-          command: npm publish
+          command: |
+            export NPM_ID_TOKEN=$(circleci run oidc get --claims '{"aud":"npm:registry.npmjs.org"}')
+            npm publish
